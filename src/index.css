@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 30% 10%;
+    --foreground: 220 20% 90%;
+
+    --card: 230 25% 14%;
+    --card-foreground: 220 20% 90%;
+
+    --popover: 230 25% 14%;
+    --popover-foreground: 220 20% 90%;
+
+    --primary: 38 90% 55%;
+    --primary-foreground: 230 30% 10%;
+
+    --secondary: 230 25% 18%;
+    --secondary-foreground: 220 20% 90%;
+
+    --muted: 230 20% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 38 90% 55%;
+    --accent-foreground: 230 30% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 38 90% 55%;
+
+    --radius: 0.75rem;
+
+    --hero-gradient: linear-gradient(135deg, hsl(240 40% 12%) 0%, hsl(260 45% 18%) 50%, hsl(230 50% 14%) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(38 90% 55%) 0%, hsl(42 95% 65%) 100%);
+    --section-alt: 240 30% 13%;
+    --section-alt2: 250 28% 15%;
+    --card-shadow: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
+    --card-shadow-hover: 0 8px 32px -4px hsl(38 90% 55% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .text-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-hero {
+    background: var(--hero-gradient);
+  }
+  .bg-section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+  .bg-section-alt2 {
+    background-color: hsl(var(--section-alt2));
+  }
+  .shadow-card {
+    box-shadow: var(--card-shadow);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+}
